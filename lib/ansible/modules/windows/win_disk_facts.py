@@ -48,7 +48,7 @@ EXAMPLES = r'''
     disksize_gb_human: '{{ disk.size|filesizeformat }}'        # returns "240.1 GB" (human readable)
     disksize_gb: '{{ (disk.size/1000|pow(3))|round|int }} GB'  # returns "240 GB" (value in GB)
 
-- name: Output second disk serial number
+- name: Output first disk serial number
   debug:
     var: ansible_facts.disks[0].serial_number
 '''
